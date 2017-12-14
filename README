@@ -1,0 +1,17 @@
+This will house all of my core thread samples.
+
+For now there is only one.   
+
+1. Simple Producer/Consumer Example
+@See SimpleProducerConsumerApplication
+There is one producer that produces more widgets for a set amount 
+of times each time a widget container is empty.  There are a few 
+widget consumers that empty it in short order.
+
+2. Simple Wait/Notify Example
+@See SimpleWaitNotifyProducerConsumerApplication
+There is one producer that produces a set amount of widgets.  There 
+are multiple consumers.  Widgets are consumed and produced as there is 
+room in the buffer for either operation.  Consumers and Producers in 
+this example do not wait for the widgets to be completely exhausted or 
+produced to continue operations
