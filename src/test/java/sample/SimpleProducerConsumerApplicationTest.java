@@ -10,7 +10,7 @@ public class SimpleProducerConsumerApplicationTest {
 	@Test public void test() {
 		int amountToProduce = 20; 
 		IntStream.range(0,10).forEach(c->{
-			System.out.println("running test" + c);
+			System.out.println("running [SIMPLEPRODUCER] test" + c);
 			runTrial(amountToProduce);
 		});
 	}

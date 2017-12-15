@@ -7,15 +7,15 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
 
-public class SimpleWaitNotifyProducerConsumerApplication {
+public class LockConditionProducerConsumerApplication {
 	public static void main(String[] args) {
-		new SimpleWaitNotifyProducerConsumerApplication().run(30, TimeUnit.SECONDS, 50);
+		new LockConditionProducerConsumerApplication().run(30, TimeUnit.SECONDS, 50);
 		
 	}
 	public Integer run(long timeout, TimeUnit unit, Integer amountToProduce) {
 		
 		System.out.println(("amountToProduce:"+amountToProduce+""));
-		WidgetBuffer buffer = new WidgetBuffer(10);
+		LockConditionWidgetBuffer buffer = new LockConditionWidgetBuffer(10);
 		
 		List<BufferedWidgetConsumer> consumers = 
 				Arrays.asList("A", "B", "C", "D").stream().
