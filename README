@@ -15,3 +15,9 @@ are multiple consumers.  Widgets are consumed and produced as there is
 room in the buffer for either operation.  Consumers and Producers in 
 this example do not wait for the widgets to be completely exhausted or 
 produced to continue operations
+
+2. Simple Lock/Condition Example
+@See LockConditionProducerConsumerApplication 
+Functionality wise, this is just like the wait/notify example. This 
+example uses the Lock and Condition classes to manage the semaphore.  
+In addition the main runner is using Futures to do post processing

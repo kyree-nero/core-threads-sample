@@ -1,11 +1,13 @@
 package sample;
 
-public class BufferedWidgetConsumer implements Runnable {
+import java.util.concurrent.Callable;
+
+public class BufferedWidgetConsumer implements Callable<Integer> {
 	private WidgetBuffer buffer;
 	
 	private String id;
 	private int threshold = 50;
-	private int consumed= 0;
+	
 	
 	public BufferedWidgetConsumer(WidgetBuffer buffer, String id) {
 		this.id = id;
@@ -14,7 +16,8 @@ public class BufferedWidgetConsumer implements Runnable {
 	
 	
 	@Override
-	public void run() {
+	public Integer call() throws Exception {
+		int consumed= 0;
 		try {
 			
 			while(!buffer.isClosed() && consumed < threshold ) {
@@ -40,13 +43,9 @@ public class BufferedWidgetConsumer implements Runnable {
 		} catch (InterruptedException e) {
 			Thread.currentThread().interrupt();
 		}
-		
-	}
-
-
-	public int getConsumed() {
 		return consumed;
 	}
+
 	
 	
 }

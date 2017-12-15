@@ -6,7 +6,7 @@ import java.util.stream.IntStream;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
-@Ignore
+
 public class LockConditionProducerConsumerApplicationTest {
 	
 	@Test public void test() {
