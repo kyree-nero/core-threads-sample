@@ -4,6 +4,7 @@ public class BufferedWidgetProducer implements Runnable{
 	public BufferedWidgetProducer(WidgetBuffer buffer, int amountToProduce) {
 		this.buffer = buffer; 
 		this.amountToProduce = amountToProduce;
+		buffer.setClosed(false);
 	}
 	private WidgetBuffer buffer;
 	private Integer amountToProduce;
@@ -12,7 +13,7 @@ public class BufferedWidgetProducer implements Runnable{
 	public void run() {
 		try {
 		System.out.println("[PRODUCER] starting shop ");
-		buffer.setClosed(false);
+		
 		int currentCount = 0;
 		while(!buffer.isClosed() && currentCount < amountToProduce) {
 			System.out.println("[PRODUCER] WidgetProducer looking for widgets");
