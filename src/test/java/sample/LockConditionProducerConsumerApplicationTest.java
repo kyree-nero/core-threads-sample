@@ -18,7 +18,7 @@ public class LockConditionProducerConsumerApplicationTest {
 	}
 	
 	public void runTrial(int amountToProduce) {
-		LockConditionProducerConsumerApplication2 applicationInstance = new LockConditionProducerConsumerApplication2();
+		LockConditionProducerConsumerApplication applicationInstance = new LockConditionProducerConsumerApplication();
 		int amountConsumed = applicationInstance.run(10, TimeUnit.SECONDS, amountToProduce);
 		Assert.assertEquals(amountToProduce, amountConsumed);
 	}

@@ -9,9 +9,9 @@ import java.util.concurrent.TimeUnit;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
-public class LockConditionProducerConsumerApplication2 {
+public class LockConditionProducerConsumerApplication {
 	public static void main(String[] args) {
-		new LockConditionProducerConsumerApplication2().run(30, TimeUnit.SECONDS, 50);
+		new LockConditionProducerConsumerApplication().run(30, TimeUnit.SECONDS, 50);
 		
 	}
 	public Integer run(long timeout, TimeUnit unit, Integer amountToProduce) {
